@@ -399,7 +399,7 @@
                 staticClass: "d-flex align-items-center"
             }, [s("img", {
                 attrs: {
-                    src: "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg"
+                    src: "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
                 }
             }), s("span", [t._v("無法借車")])])
         }
