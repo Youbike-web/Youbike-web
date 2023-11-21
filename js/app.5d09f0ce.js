@@ -362,13 +362,13 @@
                     staticClass: "popup-footer-block1",
                     class: {
                         "bg-success": e.sbi > 5,
-                        "bg-danger": e.sbi <=5
+                        "bg-danger": e.sbi <= 5
                     }
                 }, [t._v("可借：" + t._s(e.sbi))]), s("h6", {
                     staticClass: "popup-footer-block2",
                     class: {
                         "bg-success": e.bemp > 5,
-                        "bg-danger": e.sbi <=5
+                        "bg-danger": e.bemp <= 5
                     }
                 }, [t._v("可還：" + t._s(e.bemp))])])])], 1)
             }
