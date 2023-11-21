@@ -602,7 +602,7 @@
                             this.$set(this.youbikes[r], "favored", !1)
                 },
                 setIcons: function(t) {
-                    return "0" === t.act || "0" === t.sbi && "0" === t.bemp ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/31559bd4812015166487699283aed8fab27d6fe0/src/assets/images/marker-notworking.svg" : "1" === t.act && "0" === t.sbi ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg" : "1" === t.act && "0" === t.bemp ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-noparking.svg" : "https://github.com/Dniellu/Youbike-system/blob/main/img/akai4-36pp3.svg"
+                    return "0" === t.act || "0" === t.sbi && "0" === t.bemp ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/31559bd4812015166487699283aed8fab27d6fe0/src/assets/images/marker-notworking.svg" : "1" === t.act && "0" === t.sbi ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg" : "1" === t.act && "0" === t.bemp ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-noparking.svg" : "https://ws5618-my.sharepoint.com/personal/samuel_ws5618_onmicrosoft_com/_layouts/15/embed.aspx?UniqueId=3afce2d6-cc1b-4897-a783-700f6b35b70a"
                 },
                 addToFavYoubikes: function(t) {
                     var e = JSON.parse(localStorage.getItem("favYoubikesId")) || [];
