@@ -312,11 +312,7 @@
                 attrs: {
                     url: t.url
                 }
-            }), s("l-control-attribution", {
-                attrs: {
-                    position: "bottomright",
-                    prefix: "<a href='https://leafletjs.com' target='_blank' title='AJSlibraryforinteractivemaps'>Leaflet</a> | 程式碼：<a href='https://github.com/zou0u06' target='_blank'>Frank Liu</a> 樣式參考：<a href='https://www.behance.net/gallery/93048833/UIUX-?tracking_source=for_you_feed_user_published'>K.T</a>"
-                }
+            
             }), s("l-control-zoom", {
                 attrs: {
                     position: "bottomright"
