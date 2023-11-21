@@ -192,50 +192,5 @@
   font-size: 20px;
 }
 
-//chat bot button
-.css-12gc6ey {
-  display: block !important;
-}
-.chabot {
-  position: fixed;
-  right: 10px;
-  bottom: 93px;
-  z-index: 300;
-}
-.chabot::before {
-  content: '';
-  float: right;
-  position: relative;
-  background: #FFFFFF url(https://www.youbike.com.tw/region/assets/images/online_doll.svg) no-repeat top center;
-  background-size: 85px;
-  border-radius: 100%;
-  border: solid 0.15em #cccccc;
-  box-shadow: 0 2px 4px #c7c6c6;
-}
-.chabot a, .chabot::before {
-  width: 70px;
-  height: 70px;
-  display: block;
-}
-.chabot::after {
-  content: '我是 YouBike 小管家，\A 任何問題都可以詢問我!';
-  display: block;
-  float: left;
-  position: relative;
-  background: #585858;
-  border-radius: 20px;
-  padding: 5px 15px 10px;
-  color: #FFFFFF;
-  margin-right: 10px;
-  line-height: 1.5em;
-  white-space: pre;
-  word-wrap: break-word;
-  animation: chabot_say 5s;
-  animation-fill-mode: forwards;
-}
-.css-845s8f::after {
-  display: none !important;
-}
-
 
 
