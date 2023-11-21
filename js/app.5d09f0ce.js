@@ -194,7 +194,7 @@
                 staticClass: "d-flex"
             }, [s("h1", {
                 staticClass: "h2 mb-3"
-            }, [t._v("臺北市 YouBike 即時資訊地圖")]), s("button", {
+            }, [t._v("臺北市 YouBike_2.0 & 天氣 即時資訊地圖")]), s("button", {
                 staticClass: "btn-close ms-2",
                 attrs: {
                     type: "button",
@@ -217,7 +217,7 @@
                 staticClass: "sidebar-input-textfield",
                 attrs: {
                     type: "text",
-                    placeholder: "請搜尋站名、路名、地標等關鍵字"
+                    placeholder: "請輸入關鍵字(站名、路名、地標等)"
                 },
                 domProps: {
                     value: t.searchText
@@ -361,14 +361,14 @@
                 }, [s("h6", {
                     staticClass: "popup-footer-block1",
                     class: {
-                        "bg-success": e.sbi > 0,
-                        "bg-danger": "0" === e.sbi
+                        "bg-success": e.sbi > 5,
+                        "bg-danger": e.sbi <=5
                     }
                 }, [t._v("可借：" + t._s(e.sbi))]), s("h6", {
                     staticClass: "popup-footer-block2",
                     class: {
-                        "bg-success": e.bemp > 0,
-                        "bg-danger": "0" === e.bemp
+                        "bg-success": e.bemp > 5,
+                        "bg-danger": e.sbi <=5
                     }
                 }, [t._v("可還：" + t._s(e.bemp))])])])], 1)
             }
