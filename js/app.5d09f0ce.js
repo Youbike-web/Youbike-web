@@ -387,7 +387,7 @@
                 staticClass: "d-flex align-items-center"
             }, [s("img", {
                 attrs: {
-                    src: "src\assets\images\地標_綠.png"
+                    src: "src\assets\images\地標_綠.svg"
                 }
             }), s("span", [t._v("正常營運")])])
         }
