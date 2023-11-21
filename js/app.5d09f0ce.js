@@ -387,7 +387,7 @@
                 staticClass: "d-flex align-items-center"
             }, [s("img", {
                 attrs: {
-                    src: "src\assets\images\marker.svg"
+                    src:"https://ws5618-my.sharepoint.com/personal/samuel_ws5618_onmicrosoft_com/_layouts/15/embed.aspx?UniqueId=3afce2d6-cc1b-4897-a783-700f6b35b70a"
                 }
             }), s("span", [t._v("正常營運")])])
         }
