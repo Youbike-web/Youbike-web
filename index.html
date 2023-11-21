@@ -21,20 +21,35 @@
         <link href="js/chunk-vendors.b2adad64.js" rel="preload" as="script">
         <link href="css/chunk-vendors.b27e38af.css" rel="stylesheet">
         <link href="css/app.8852b1b7.css" rel="stylesheet">
+        <style>
+            .fixed-button-container {
+              position: fixed;
+              top: 120px;
+              right: 0;
+              z-index: 999;
+            }
+        
+            .fixed-button img {
+              width: 40px; /* 設定圖片寬度 */
+              height: auto; /* 保持長寬比 */
+            }
+          </style>
     </head>
     <body>
+        <!-- 按鈕固定容器 -->
+        <div class="fixed-button-container">
+            <!-- 使用圖片作為按鈕 -->
+            <a href="https://chatweb.youbike.com.tw/" class="fixed-button">
+            <img src="https://www.youbike.com.tw/region/assets/images/online_doll.svg" alt="youbike AI">
+            </a>
+        </div>
+
         <noscript>
             <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
         <div id="app"></div>
         <script src="js/chunk-vendors.b2adad64.js"></script>
         <script src="js/app.5d09f0ce.js"></script>
-        
-        <div style="position: relative;">
-            <a href="https://chatweb.youbike.com.tw/" style="position: absolute; right: 5; top:80px">
-              <button><img src="https://www.youbike.com.tw/region/assets/images/online_doll.svg">youbike AI</button>
-            </a>
-          </div>
           
     </body>
 </html>
