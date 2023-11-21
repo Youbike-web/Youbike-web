@@ -312,11 +312,7 @@
                 attrs: {
                     url: t.url
                 }
-            }), s("l-control-attribution", {
-                attrs: {
-                    position: "bottomright",
-                    prefix: "<a href='https://chatweb.youbike.com.tw/' target='_blank' title='AJSlibraryforinteractivemaps'>Youbike AI客服</a>"
-                }
+            
             }), s("l-control-zoom", {
                 attrs: {
                     position: "bottomright"
