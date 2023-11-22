@@ -598,7 +598,7 @@
                             this.$set(this.youbikes[r], "favored", !1)
                 },
                 setIcons: function(t) {
-                    return "0" === t.act || "0" === t.sbi && "0" === t.bemp ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/31559bd4812015166487699283aed8fab27d6fe0/src/assets/images/marker-notworking.svg" : t.sbi ==="0" ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg" : t.bemp ==="0" ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-noparking.svg" : "https://raw.githubusercontent.com/shenhsiu45/My-web/main/img/green_mark.png"
+                    return "0" === t.act || "0" === t.sbi && "0" === t.bemp ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/31559bd4812015166487699283aed8fab27d6fe0/src/assets/images/marker-notworking.svg" : t.sbi <=5 ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg" : t.bemp <=5 ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-noparking.svg" : "https://raw.githubusercontent.com/shenhsiu45/My-web/main/img/green_mark.png"
                 },
                 addToFavYoubikes: function(t) {
                     var e = JSON.parse(localStorage.getItem("favYoubikesId")) || [];
