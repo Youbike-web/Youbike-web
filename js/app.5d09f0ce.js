@@ -383,7 +383,7 @@
                 staticClass: "d-flex align-items-center"
             }, [s("img", {
                 attrs: {
-                    src:"https://raw.githubusercontent.com/shenhsiu45/My-web/main/img/green_mark.png"
+                    src: "https://raw.githubusercontent.com/shenhsiu45/My-web/main/img/green_mark.png"
                 }
             }), s("span", [t._v("正常營運")])])
         }
