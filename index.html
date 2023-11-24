@@ -54,5 +54,20 @@
         <script src="js/app.5d09f0ce.js"></script>
         <!--定位-->
         <script src="src/control_locate/L.Control.Locate.js"></script>  
+        <script>
+          var map;
+      
+          function initMap(){
+              map = new L.Map('map',{zoomControl : false});
+              var osmUrl = 'http://{s}.tile.openstreetmap.org/mapnik_tiles/{z}/{x}/{y}.png',
+                  osmAttribution = 'Map data &copy; 2012 OpenStreetMap contributors',
+                  osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttribution});
+              map.setView(new L.LatLng(51.930156,7.189230), 7).addLayer(osm);
+          }
+      
+          function locateUser(){
+              map.locate({setView : true});
+          }
+      </script>
     </body>
 </html>
