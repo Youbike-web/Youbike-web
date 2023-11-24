@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-  <!-- ...（這裡是你原本的 head 內容）... -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>臺北市 YouBike 即時資訊地圖</title>
+  <link rel="icon" href="src/assets/images/youbike.ico">
+  <link rel="apple-touch-icon" href="src/assets/images/youbike.ico">
+  <meta name="description" content="臺北市 YouBike 即時資訊地圖，方便你隨時查詢的小幫手">
+  <meta name="keyword" content="即時, 資訊, 地圖, 臺北市, 臺北, youbike, YouBike, 台北市, 台北">
+  <meta property="og:title" content="臺北 YouBike 即時資訊地圖">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="#">
+  <meta property="og:description" content="臺北 YouBike 即時資訊地圖，方便你隨時查詢的小幫手">
+  <script src="https://kit.fontawesome.com/a9468d723f.js" crossorigin="anonymous"></script>
+  <link href="css/app.8852b1b7.css" rel="preload" as="style">
+  <link href="css/chunk-vendors.b27e38af.css" rel="preload" as="style">
+  <link href="js/app.5d09f0ce.js" rel="preload" as="script">
+  <link href="js/chunk-vendors.b2adad64.js" rel="preload" as="script">
+  <link href="css/chunk-vendors.b27e38af.css" rel="stylesheet">
+  <link href="css/app.8852b1b7.css" rel="stylesheet">
 
   <style>
-    /* ...（這裡是你原本的樣式）... */
-    
-    /* 新增的內容展開區塊的樣式 */
-    .hidden {
-      display: none;
+    /* 原本的樣式 */
+    .fixed-button-container {
+      position: fixed;
+      top: 300px;
+      right: 0;
+      z-index: 999;
     }
-    
-    /* 按鈕樣式 */
+
+    .fixed-button img {
+      width: 100px; /* 設定圖片寬度 */
+      height: auto; /* 保持長寬比 */
+    }
+
+    /* 新增的樣式 */
+    .hidden-content {
+      display: none;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
     .show-content-button {
       position: fixed;
       top: 50%;
-      right: 0;
+      right: 20px;
       transform: translateY(-50%);
       cursor: pointer;
       padding: 10px 20px;
@@ -28,21 +62,42 @@
   </style>
 </head>
 <body>
-  <!-- ...（這裡是你原本的 body 內容）... -->
+  <!-- 按鈕固定容器 -->
+  <div class="fixed-button-container">
+    <!-- 使用圖片作為按鈕 -->
+    <a href="https://chatweb.youbike.com.tw/" class="fixed-button">
+      <img src="https://www.youbike.com.tw/region/assets/images/online_doll.svg" alt="youbike AI">
+    </a>
+  </div>
+
+  <!-- 按鈕展開的內容 -->
+  <div class="hidden-content" id="hiddenContent">
+    <h2>租借流程</h2>
+    <p>悠遊卡、一卡通：<br>
+      租車時直接在停車柱上的感應區感應... （這裡放你想要顯示的內容）</p>
   
-  <!-- 隱藏的內容展開區塊 -->
-  <div id="content" class="hidden">
-    <!-- ...（這裡是你原本的隱藏內容）... -->
+    <!-- 其他租車相關內容 -->
+
+    <h2>付費方式</h2>
+    <p>悠遊卡、一卡通：<br>
+      要使用悠遊卡或一卡通付費必須先在各站點KIOSK... （這裡放你想要顯示的內容）</p>
+  
+    <!-- 其他付費方式相關內容 -->
   </div>
 
   <!-- 可見的按鈕 -->
   <button class="show-content-button" onclick="toggleContent()">使用方法</button>
 
-  <!-- ...（這裡是你原本的 body 其他內容）... -->
+  <noscript>
+    <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <script src="js/chunk-vendors.b2adad64.js"></script>
+  <script src="js/app.5d09f0ce.js"></script>
 
   <script>
     function toggleContent() {
-      var content = document.getElementById("content");
+      var content = document.getElementById("hiddenContent");
       if (content.style.display === "none") {
         content.style.display = "block";
       } else {
@@ -50,5 +105,4 @@
       }
     }
   </script>
-</body>
-</html>
+</body
