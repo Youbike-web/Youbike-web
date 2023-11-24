@@ -380,9 +380,10 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         },
         this
       ).on(this._link, "dblclick", L.DomEvent.stopPropagation);
+
       //start 定位
       L.control.locate({
-        position: 'topleft',
+        position: 'bottonleft',
         locateOptions: {
           enableHighAccuracy: true
         },
