@@ -832,4 +832,13 @@
     },
     "9c0c": function(t, e, s) {}
 });
+function toggleContent() {
+    var content = document.getElementById("hiddenContent");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+    } else {
+      content.style.display = "none";
+    }
+  }
+  
 //# sourceMappingURL=app.5d09f0ce.js.map
