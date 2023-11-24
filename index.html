@@ -13,36 +13,30 @@
     
     /* 按鈕樣式 */
     .show-content-button {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
       cursor: pointer;
       padding: 10px 20px;
       background-color: #3498db;
       color: #fff;
       border: none;
       border-radius: 5px;
-      margin-bottom: 10px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
   <!-- ...（這裡是你原本的 body 內容）... -->
   
-  <!-- 可見的按鈕 -->
-  <button class="show-content-button" onclick="toggleContent()">使用方法</button>
-
   <!-- 隱藏的內容展開區塊 -->
   <div id="content" class="hidden">
-    <h2>租借流程</h2>
-    <p>悠遊卡、一卡通：<br>
-      租車時直接在停車柱上的感應區感應... （這裡放你想要顯示的內容）</p>
-  
-    <!-- 其他租車相關內容 -->
-
-    <h2>付費方式</h2>
-    <p>悠遊卡、一卡通：<br>
-      要使用悠遊卡或一卡通付費必須先在各站點KIOSK... （這裡放你想要顯示的內容）</p>
-  
-    <!-- 其他付費方式相關內容 -->
+    <!-- ...（這裡是你原本的隱藏內容）... -->
   </div>
+
+  <!-- 可見的按鈕 -->
+  <button class="show-content-button" onclick="toggleContent()">使用方法</button>
 
   <!-- ...（這裡是你原本的 body 其他內容）... -->
 
