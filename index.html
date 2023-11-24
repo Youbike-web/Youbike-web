@@ -55,38 +55,36 @@
         <!--定位-->
         <script src="src/control_locate/L.Control.Locate.js"></script> 
 
-        <button onclick="getLocation()">獲取位置</button>
-        <script>
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition, showError);
-                } else {
-                    document.getElementById("demo").innerHTML = "浏览器不支持获取位置信息。";
-                }
-            }
+        <!-- 创建地图容器 -->
+    <div id="map"></div>
 
-            function showPosition(position) {
+    <script>
+        // 检查浏览器是否支持Geolocation API
+        if ("geolocation" in navigator) {
+            // 获取用户位置成功后在 Leaflet 地图上显示
+            navigator.geolocation.getCurrentPosition(function(position) {
                 var latitude = position.coords.latitude;
                 var longitude = position.coords.longitude;
-                document.getElementById("demo").innerHTML = "你的位置是纬度: " + latitude + "，经度: " + longitude;
-            }
 
-            function showError(error) {
-                switch (error.code) {
-                    case error.PERMISSION_DENIED:
-                        document.getElementById("demo").innerHTML = "用户拒绝了位置请求。";
-                        break;
-                    case error.POSITION_UNAVAILABLE:
-                        document.getElementById("demo").innerHTML = "位置信息不可用。";
-                        break;
-                    case error.TIMEOUT:
-                        document.getElementById("demo").innerHTML = "获取位置信息超时。";
-                        break;
-                    case error.UNKNOWN_ERROR:
-                        document.getElementById("demo").innerHTML = "发生了未知错误。";
-                        break;
-                }
-            }
-        </script>
+                // 创建 Leaflet 地图
+                var map = L.map('map').setView([latitude, longitude], 13);
+
+                // 添加 OpenStreetMap 图层
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                // 在地图上添加标记
+                L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup('您的位置在这里！').openPopup();
+            }, function(error) {
+                // 获取用户位置失败
+                console.error("获取位置失败:", error.message);
+            });
+        } else {
+            // 浏览器不支持Geolocation API
+            console.error("浏览器不支持地理位置定位");
+        }
+    </script>
     </body>
 </html>
