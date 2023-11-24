@@ -161,7 +161,7 @@
                 }
             }, [t._v("功能列表 ")]), s("div", {
                 staticClass: "legend",
-                on: {
+                on: {   
                     click: function(e) {
                         t.legendActive = !t.legendActive
                     }
