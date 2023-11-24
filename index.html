@@ -53,6 +53,38 @@
         <script src="js/chunk-vendors.b2adad64.js"></script>
         <script src="js/app.5d09f0ce.js"></script>
         <!--定位-->
-        <script src="src/control_locate/L.Control.Locate.js"></script>  
+        <script src="src/control_locate/L.Control.Locate.js"></script> 
+
+        <!-- 创建地图容器 -->
+    <div id="map"></div>
+
+    <script>
+        // 检查浏览器是否支持Geolocation API
+        if ("geolocation" in navigator) {
+            // 获取用户位置成功后在 Leaflet 地图上显示
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // 创建 Leaflet 地图
+                var map = L.map('map').setView([latitude, longitude], 13);
+
+                // 添加 OpenStreetMap 图层
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                // 在地图上添加标记
+                L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup('您的位置在这里！').openPopup();
+            }, function(error) {
+                // 获取用户位置失败
+                console.error("获取位置失败:", error.message);
+            });
+        } else {
+            // 浏览器不支持Geolocation API
+            console.error("浏览器不支持地理位置定位");
+        }
+    </script>
     </body>
 </html>
