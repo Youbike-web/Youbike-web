@@ -3467,31 +3467,7 @@
                 cacheMapView: function(t, e) {
                     this.lastSetBounds = t || this.mapObject.getBounds(),
                     this.lastSetCenter = e || this.lastSetBounds.getCenter()
-                },
-                //////start定位
-                watchUserLocation() {
-                    if (navigator.geolocation) {
-                      navigator.geolocation.watchPosition(
-                        this.onUserLocationSuccess,
-                        this.onUserLocationError
-                      );
-                    } else {
-                      console.error("Geolocation is not supported by this browser.");
-                    }
-                  },
-                
-                  onUserLocationSuccess(position) {
-                    const { latitude, longitude } = position.coords;
-                    // 更新地圖的中心點為使用者的位置
-                    this.map.setView([latitude, longitude], this.map.getZoom());
-                    // 其他處理...
-                  },
-                
-                  onUserLocationError(error) {
-                    console.error(`Error getting user location: ${error.message}`);
-                    // 其他處理...
-                  }
-                  //////定位end
+                }
             }
         };
         function h(t, e, n, i, o, r, s, a, u, c) {
