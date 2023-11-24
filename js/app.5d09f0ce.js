@@ -1,21 +1,3 @@
-L.control.locate({
-    position: 'topright',
-    locateOptions: {
-      enableHighAccuracy: true
-    },
-    strings: {
-      title: '定位我的位置',
-      metersUnit: '公尺',
-      feetUnit: '英尺',
-      popup: '距離誤差：{distance}{unit}以內'
-    },
-    clickBehavior: {
-      inView: 'stop',
-      outOfView: 'setView',
-      inViewNotFollowing: 'inView'
-    }
-  }).addTo(map);
-
 (function(t) {
     function e(e) {
         for (var a, o, n = e[0], c = e[1], l = e[2], d = 0, f = []; d < n.length; d++)
