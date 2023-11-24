@@ -8176,8 +8176,11 @@ progress {
   
 .legend:hover {
     background-color: #f8f8f8;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 255, 0.6) inset;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px  rgba(0, 0, 255, 0.6) inset;
+    transition: box-shadow 0.3s ease; /* 添加過渡效果，使顏色變化更流暢 */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0.8)); /* 添加背景色漸變效果 */
 }
+
 
 
 .legend img {
