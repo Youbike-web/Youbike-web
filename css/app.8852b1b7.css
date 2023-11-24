@@ -8175,8 +8175,11 @@ progress {
 
 .legend img {
     height: 40px;
-    margin-right: .85rem
+    margin-right: .85rem;
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 阴影效果 */
 }
+
 
 .leaflet-control-zoom.leaflet-bar {
     box-shadow: 0 1px 5px #000
