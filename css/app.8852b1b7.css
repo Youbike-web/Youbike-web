@@ -8225,11 +8225,11 @@ progress {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #0000009c;
+    background-color: #ffffbc77;
     line-height: 1.5;
     font-weight: 400;
     font-size: 1rem;
-    color: #ffffff
+    color: #720000;
 }
 
 @media (max-width: 767.98px) {
