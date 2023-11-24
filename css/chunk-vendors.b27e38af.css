@@ -331,19 +331,20 @@
 
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out {
-    border-radius: 100%; /* 圆形按钮 */
-    width: 50px;
-    height: 50px;
+    border-radius: 50%; /* 圆形按钮 */
+    width: 52px; /* 原始大小的两倍 */
+    height: 52px; /* 原始大小的两倍 */
     background-color: blue; /* 蓝色背景 */
     border: none; /* 去除边框 */
-    box-shadow: 0 0 8px 2px rgba(0, 0, 255, 0.5); /* 点击发光效果 */
+    box-shadow: 0 0 16px 4px rgba(0, 0, 255, 0.5); /* 点击发光效果 */
     transition: box-shadow 0.3s ease; /* 过渡效果 */
 }
 
 .leaflet-control-zoom-in:hover,
 .leaflet-control-zoom-out:hover {
-    box-shadow: 0 0 12px 4px rgba(0, 0, 255, 0.7); /* 悬停时更强的发光效果 */
+    box-shadow: 0 0 24px 8px rgba(0, 0, 255, 0.7); /* 悬停时更强的发光效果 */
 }
+
 
 
 .leaflet-control-layers {
