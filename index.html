@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-  <!-- 省略其他的 meta 和 link 標籤 -->
-  <!-- ... -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>臺北市 YouBike 即時資訊地圖</title>
+  <link rel="icon" href="src/assets/images/youbike.ico">
+  <link rel="apple-touch-icon" href="src/assets/images/youbike.ico">
+  <meta name="description" content="臺北市 YouBike 即時資訊地圖，方便你隨時查詢的小幫手">
+  <meta name="keyword" content="即時, 資訊, 地圖, 臺北市, 臺北, youbike, YouBike, 台北市, 台北">
+  <meta property="og:title" content="臺北 YouBike 即時資訊地圖">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="#">
+  <meta property="og:description" content="臺北 YouBike 即時資訊地圖，方便你隨時查詢的小幫手">
+  <script src="https://kit.fontawesome.com/a9468d723f.js" crossorigin="anonymous"></script>
+  <link href="css/app.8852b1b7.css" rel="preload" as="style">
+  <link href="css/chunk-vendors.b27e38af.css" rel="preload" as="style">
+  <link href="js/app.5d09f0ce.js" rel="preload" as="script">
+  <link href="js/chunk-vendors.b2adad64.js" rel="preload" as="script">
+  <link href="css/chunk-vendors.b27e38af.css" rel="stylesheet">
+  <link href="css/app.8852b1b7.css" rel="stylesheet">
 
   <style>
-    /* 原有樣式 */
-    /* ... */
+    /* 原本的樣式 */
+    .fixed-button-container {
+      position: fixed;
+      top: 300px;
+      right: 0;
+      z-index: 999;
+    }
 
-    /* 新增樣式 */
-    /* ... */
+    .fixed-button img {
+      width: 100px; /* 設定圖片寬度 */
+      height: auto; /* 保持長寬比 */
+    }
+
+    /* 新增的樣式 */
+    .hidden-content {
+      display: none;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .show-content-button {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -23,8 +72,27 @@
 
   <!-- 按鈕展開的內容 -->
   <div class="hidden-content" id="hiddenContent">
-    <!-- 內容 -->
-    <!-- ... -->
+    <h2>租借流程</h2>
+    <p>悠遊卡、一卡通：<br> 
+        1.租車時直接在停車柱上的感應區感應，確認綠色指示燈開始閃爍並發出短鳴聲後，雙手用力把車向後拉出即可使用。</p>
+    <img src="https://raw.githubusercontent.com/Dniellu/Youbike-system/main/img/Youbike%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.png">
+    <p>2.還車時選定亮藍燈的空柱，輪胎壓齊地上白線、對準卡槽，車頭擺正往前推入到底。鎖上後藍燈會閃爍並發出短鳴聲，持悠遊卡或一卡通放置於停車柱感應區扣款，待燈號跳回第一個綠燈，即完成還車程序。</p>
+    <img src="https://raw.githubusercontent.com/Dniellu/Youbike-system/main/img/youBIKE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%952.png">
+</div>
+
+    <p>信用卡：<br>
+      1.租車時於KIOSK（自動服務機）設定好付費方式後，在螢幕上選車。90秒內將選定的車向後拉出即可使用。<br>
+      2.還車時選定亮藍燈的空柱，輪胎壓齊地上白線、對準卡槽，車頭擺正往前推入到底。系統會自動計算費用並且扣款。</p>
+    <!-- 其他租車相關內容 -->
+
+    <h2>付費方式</h2>
+    <p>悠遊卡、一卡通：<br>
+      要使用悠遊卡或一卡通付費必須先在各站點KIOSK（自動服務機）、官方網站、官方APP或服務中心申辦會員後才可使用。申辦過程中需填寫手機號碼、卡號等資訊。</p>
+    <p>信用卡：<br>
+      直接至各站點KIOSK（自動服務機）借車，還車時系統會自動計算費用並且扣款。</p>
+    <!-- 其他付費方式相關內容 -->
+    
+  
   </div>
 
   <!-- 可見的按鈕 -->
@@ -33,9 +101,9 @@
   <noscript>
     <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
-  
-  <!-- 省略其他的 script 標籤 -->
-  <!-- ... -->
+  <div id="app"></div>
+  <script src="js/chunk-vendors.b2adad64.js"></script>
+  <script src="js/app.5d09f0ce.js"></script>
 
   <script>
     function toggleContent() {
@@ -47,5 +115,4 @@
       }
     }
   </script>
-</body>
-</html>
+</body
