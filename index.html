@@ -53,21 +53,40 @@
         <script src="js/chunk-vendors.b2adad64.js"></script>
         <script src="js/app.5d09f0ce.js"></script>
         <!--定位-->
-        <script src="src/control_locate/L.Control.Locate.js"></script>  
+        <script src="src/control_locate/L.Control.Locate.js"></script> 
+
+        <button onclick="getLocation()">獲取位置</button>
         <script>
-          var map;
-      
-          function initMap(){
-              map = new L.Map('map',{zoomControl : false});
-              var osmUrl = 'http://{s}.tile.openstreetmap.org/mapnik_tiles/{z}/{x}/{y}.png',
-                  osmAttribution = 'Map data &copy; 2012 OpenStreetMap contributors',
-                  osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttribution});
-              map.setView(new L.LatLng(51.930156,7.189230), 7).addLayer(osm);
-          }
-      
-          function locateUser(){
-              map.locate({setView : true});
-          }
-      </script>
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                } else {
+                    document.getElementById("demo").innerHTML = "浏览器不支持获取位置信息。";
+                }
+            }
+
+            function showPosition(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                document.getElementById("demo").innerHTML = "你的位置是纬度: " + latitude + "，经度: " + longitude;
+            }
+
+            function showError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        document.getElementById("demo").innerHTML = "用户拒绝了位置请求。";
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        document.getElementById("demo").innerHTML = "位置信息不可用。";
+                        break;
+                    case error.TIMEOUT:
+                        document.getElementById("demo").innerHTML = "获取位置信息超时。";
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        document.getElementById("demo").innerHTML = "发生了未知错误。";
+                        break;
+                }
+            }
+        </script>
     </body>
 </html>
