@@ -21,7 +21,7 @@
   <link href="js/chunk-vendors.b2adad64.js" rel="preload" as="script">
   <link href="css/chunk-vendors.b27e38af.css" rel="stylesheet">
   <link href="css/app.8852b1b7.css" rel="stylesheet">
-  
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <style>
     /* 原本的樣式 */
@@ -114,34 +114,5 @@
         content.style.display = "none";
       }
     }
-     // 定位用户
-     function locateUser() {
-            if ("geolocation" in navigator) {
-                navigator.geolocation.getCurrentPosition(
-                    function(position) {
-                        var latitude = position.coords.latitude;
-                        var longitude = position.coords.longitude;
-
-                        // 在地图上添加标记
-                        L.marker([latitude, longitude]).addTo(map)
-                            .bindPopup('您的位置在这里！').openPopup();
-                    },
-                    function(error) {
-                        console.error("获取位置失败:", error.message);
-                    }
-                );
-            } else {
-                console.error("浏览器不支持地理位置定位");
-            }
-        }
-
-            // 在按钮点击时定位用户
-            $('#locateButton').on('click', function () {
-                locateUser();
-            });
   </script>
-    <!-- 在页面中添加一个按钮，用于触发定位 -->
-    <div id="actions">
-      <button id="locateButton">定位用户</button>
-    </div>
 </body
