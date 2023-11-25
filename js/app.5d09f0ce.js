@@ -832,15 +832,5 @@
     },
     "9c0c": function(t, e, s) {}
 });
-<script>
-    function toggleContent() {
-        var content = document.getElementById("hiddenContent");
-        if (content.style.display === "none") {
-            content.style.display = "block"; // 顯示內容
-        } else {
-            content.style.display = "none"; // 隱藏內容
-        }
-    }
-</script>
 
 //# sourceMappingURL=app.5d09f0ce.js.map
