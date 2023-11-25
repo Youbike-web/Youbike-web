@@ -1,5 +1,3 @@
-const { TRUE } = require("node-sass");
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-vendors"], {
     "00ee": function(t, e, n) {
         var i = n("b622")
@@ -21000,10 +20998,10 @@ const { TRUE } = require("node-sass");
                     this.options.zoomSnap || this.fire("viewreset"),
                     this._stop()
                 },
-                locateUser: function(t) {
+                locate: function(t) {
                     if (t = this._locateOptions = n({
                         timeout: 1e4,
-                        watch: 0
+                        watch: !1
                     }, t),
                     !("geolocation"in navigator))
                         return this._handleGeolocationError({
