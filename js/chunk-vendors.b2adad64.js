@@ -21001,7 +21001,8 @@
                 locate: function(t) {
                     if (t = this._locateOptions = n({
                         timeout: 1e4,
-                        watch: !1
+                        watch: true,
+                        setView: false
                     }, t),
                     !("geolocation"in navigator))
                         return this._handleGeolocationError({
