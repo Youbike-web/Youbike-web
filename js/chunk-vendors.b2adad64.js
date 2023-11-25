@@ -21003,7 +21003,7 @@ const { TRUE } = require("node-sass");
                 locateUser: function(t) {
                     if (t = this._locateOptions = n({
                         timeout: 1e4,
-                        watch: TRUE
+                        watch: 0
                     }, t),
                     !("geolocation"in navigator))
                         return this._handleGeolocationError({
