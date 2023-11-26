@@ -515,8 +515,7 @@
                     zoom: 13,
                     center: [25.026570272068867, 121.52743388346691],
                     iconSize: [25, 40],
-                    iconAnchor: [12, 5],
-                    
+                    iconAnchor: [12, 5]
                 }
             },
             computed: {
