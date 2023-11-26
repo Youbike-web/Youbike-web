@@ -116,36 +116,36 @@
     }
   </script>
   <script>
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            alert("抱歉，您的瀏覽器不支援地理定位。");
-        }
-    }
-
-    function showPosition(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-        
-        // 將取得的經緯度資訊用 alert 顯示出來
-        alert("緯度：" + latitude + "\n經度：" + longitude);
-
-        // 如果有地圖系統，可以在這裡更新地圖位置
-        // 例如，如果使用 Google Maps API：
-        // map.setCenter({ lat: latitude, lng: longitude });
-    }
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-</head>
-<body>
-<noscript>
-    <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-</noscript>
-<div id="app"></div>
-<script src="js/chunk-vendors.b2adad64.js"></script>
-<script src="js/app.5d09f0ce.js"></script>
-<button onclick="getLocation()">取得目前位置</button>
-<div id="map" style="height: 400px;"></div>
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    alert("抱歉，您的瀏覽器不支援地理定位。");
+                }
+            }
+    
+            function showPosition(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                
+                // 將取得的經緯度資訊用 alert 顯示出來
+                alert("緯度：" + latitude + "\n經度：" + longitude);
+    
+                // 如果有地圖系統，可以在這裡更新地圖位置
+                // 例如，如果使用 Google Maps API：
+                // map.setCenter({ lat: latitude, lng: longitude });
+            }
+        </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <noscript>
+            <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+        <script src="js/chunk-vendors.b2adad64.js"></script>
+        <script src="js/app.5d09f0ce.js"></script>
+        <button onclick="getLocation()">取得目前位置</button>
+        <div id="map" style="height: 400px;"></div>
 </body>
