@@ -21,7 +21,6 @@
   <link href="js/chunk-vendors.b2adad64.js" rel="preload" as="script">
   <link href="css/chunk-vendors.b27e38af.css" rel="stylesheet">
   <link href="css/app.8852b1b7.css" rel="stylesheet">
-
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <style>
     /* 原本的樣式 */
@@ -31,12 +30,10 @@
       right: 0;
       z-index: 999;
     }
-
     .fixed-button img {
       width: 100px; /* 設定圖片寬度 */
       height: auto; /* 保持長寬比 */
     }
-
     /* 新增的樣式 */
     .hidden-content {
       display: none;
@@ -46,7 +43,6 @@
       border-radius: 5px;
       margin-top: 10px;
     }
-
     .show-content-button {
       position: fixed;
       top: 70%;
@@ -61,11 +57,28 @@
       z-index: 999;
     }
   </style>
+   <script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("抱歉，您的瀏覽器不支援地理定位。");
+        }
+    }
+
+    function showPosition(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        // 將取得的經緯度資訊用 alert 顯示出來
+        alert("緯度：" + latitude + "\n經度：" + longitude);
+
+        // 如果有地圖系統，可以在這裡更新地圖位置
+        // 例如，如果使用 Google Maps API：
+        // map.setCenter({ lat: latitude, lng: longitude });
+    }
+</script>
 </head>
-
-
-
-
 <body>
   <!-- 按鈕固定容器 -->
   <div class="fixed-button-container">
@@ -74,7 +87,6 @@
       <img src="https://www.youbike.com.tw/region/assets/images/online_doll.svg" alt="youbike AI">
     </a>
   </div>
-
   
   <!-- 按鈕展開的內容 -->
   <div class="hidden-content" id="hiddenContent" style="display: none;">
@@ -88,7 +100,6 @@
       1.租車時於KIOSK（自動服務機）設定好付費方式後，在螢幕上選車。90秒內將選定的車向後拉出即可使用。<br>
       2.還車時選定亮藍燈的空柱，輪胎壓齊地上白線、對準卡槽，車頭擺正往前推入到底。系統會自動計算費用並且扣款。</p>
     <!-- 其他租車相關內容 -->
-
     <h2>付費方式</h2>
     <p>悠遊卡、一卡通：<br>
       要使用悠遊卡或一卡通付費必須先在各站點KIOSK（自動服務機）、官方網站、官方APP或服務中心申辦會員後才可使用。申辦過程中需填寫手機號碼、卡號等資訊。</p>
@@ -98,17 +109,14 @@
     
   </div>
   
-
   <!-- 可見的按鈕 -->
   <button class="show-content-button" onclick="toggleContent()">使用方法</button>
-
   <noscript>
     <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
   <div id="app"></div>
   <script src="js/chunk-vendors.b2adad64.js"></script>
   <script src="js/app.5d09f0ce.js"></script>
-
   <script>
     function toggleContent() {
       var content = document.getElementById("hiddenContent");
@@ -119,37 +127,6 @@
       }
     }
   </script>
-  <script>
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            alert("抱歉，您的瀏覽器不支援地理定位。");
-        }
-    }
-
-    function showPosition(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-        
-        // 將取得的經緯度資訊用 alert 顯示出來
-        alert("緯度：" + latitude + "\n經度：" + longitude);
-
-        // 如果有地圖系統，可以在這裡更新地圖位置
-        // 例如，如果使用 Google Maps API：
-        // map.setCenter({ lat: latitude, lng: longitude });
-    }
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-</head>
-<body>
-<noscript>
-    <strong>We're sorry but youbikemap doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-</noscript>
-<div id="app"></div>
-<script src="js/chunk-vendors.b2adad64.js"></script>
-<script src="js/app.5d09f0ce.js"></script>
-<button onclick="getLocation()">取得目前位置</button>
-<div id="map" style="height: 400px;"></div>
+</body>
+   <button onclick="getLocation()">取得目前位置</button>
 </body>
