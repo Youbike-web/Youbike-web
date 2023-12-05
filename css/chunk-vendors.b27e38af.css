@@ -343,7 +343,7 @@
 
 .leaflet-control-zoom-in:hover,
 .leaflet-control-zoom-out:hover {
-    box-shadow: 0 0 24px 8px rgba(0, 0, 255, 0.7); /* 悬停时更强的发光效果 */
+    box-shadow: 0 0 24px 8px rgba(255, 238, 0, 0.7); /* 悬停时更强的发光效果 */
 }
 
 
