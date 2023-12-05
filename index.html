@@ -55,29 +55,11 @@
       border: none;
       border-radius: 5px;
       z-index: 999;
+      width: 100px; /* 設定按鈕寬度 */
+    height: 50px; /* 設定按鈕高度 */
     }
   </style>
-   <script>
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            alert("抱歉，您的瀏覽器不支援地理定位。");
-        }
-    }
 
-    function showPosition(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-
-        // 將取得的經緯度資訊用 alert 顯示出來
-        alert("緯度：" + latitude + "\n經度：" + longitude);
-
-        // 如果有地圖系統，可以在這裡更新地圖位置
-        // 例如，如果使用 Google Maps API：
-        // map.setCenter({ lat: latitude, lng: longitude });
-    }
-</script>
 </head>
 <body>
   <!-- 按鈕固定容器 -->
@@ -128,5 +110,5 @@
     }
   </script>
 </body>
-   <button onclick="getLocation()">取得目前位置</button>
+
 </body>
