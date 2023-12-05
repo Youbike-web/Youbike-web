@@ -335,9 +335,9 @@
     border-radius: 0; /* 方形按钮 */
     width: 200px; /* 原始大小的两倍 */
     height: 200px; /* 原始大小的两倍 */
-    background-color: blue; /* 蓝色背景 */
+    background-color: rgb(255, 217, 0); /* 黃色背景 */
     border: none; /* 去除边框 */
-    box-shadow: 0 0 16px 4px rgba(0, 0, 255, 0.5); /* 点击发光效果 */
+    box-shadow: 0 0 16px 4px rgba(255, 230, 0, 0.5); /* 点击发光效果 */
     transition: box-shadow 0.3s ease; /* 过渡效果 */
 }
 
