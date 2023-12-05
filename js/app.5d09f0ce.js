@@ -194,7 +194,7 @@
                 staticClass: "d-flex"
             }, [s("h1", {
                 staticClass: "h2 mb-3"
-            }, [t._v("臺北市"<br>"YouBike_2.0 & 天氣"<br>"即時資訊地圖")]), s("button", {
+            }, [t._v("臺北市 YouBike_2.0 & 天氣 即時資訊地圖")]), s("button", {
                 staticClass: "btn-close ms-2",
                 attrs: {
                     type: "button",
