@@ -400,7 +400,7 @@
                 staticClass: "d-flex align-items-center"
             }, [s("img", {
                 attrs: {
-                    src: "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg"
+                    src: "https://raw.githubusercontent.com/Youbike-web/Youbike-web/6ae33377e7c63585c4777491837414815861fe3b/src/assets/images/marker-nobike.svg"
                 }
             }), s("span", [t._v("無法借車")])])
         }
@@ -412,7 +412,7 @@
                 staticClass: "d-flex align-items-center"
             }, [s("img", {
                 attrs: {
-                    src: "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-noparking.svg"
+                    src: "https://raw.githubusercontent.com/Youbike-web/Youbike-web/eb8646e4b75c632180c0d07b88effda557b012c5/src/assets/images/marker-noparking.svg"
                 }
             }), s("span", [t._v("無法還車")])])
         }
@@ -603,7 +603,7 @@
                             this.$set(this.youbikes[r], "favored", !1)
                 },
                 setIcons: function(t) {
-                    return "0" === t.act || "0" === t.sbi && "0" === t.bemp ? "https://raw.githubusercontent.com/Dniellu/Youbike-system/main/img/%E5%9C%B0%E6%A8%99_%E7%B4%85%E6%96%B0_Resize%20Image.png" : t.sbi <=0 ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-nobike.svg" : t.bemp <=0 ? "https://raw.githubusercontent.com/zou0u06/YouBike-map/4e8cce62ed489ff8f54f8cfadfa06f0cc53c3bbb/src/assets/images/marker-noparking.svg" : "https://raw.githubusercontent.com/shenhsiu45/My-web/main/img/green_mark.png"
+                    return "0" === t.act || "0" === t.sbi && "0" === t.bemp ? "https://raw.githubusercontent.com/Dniellu/Youbike-system/main/img/%E5%9C%B0%E6%A8%99_%E7%B4%85%E6%96%B0_Resize%20Image.png" : t.sbi <=0 ? "https://raw.githubusercontent.com/Youbike-web/Youbike-web/6ae33377e7c63585c4777491837414815861fe3b/src/assets/images/marker-nobike.svg" : t.bemp <=0 ? "https://raw.githubusercontent.com/Youbike-web/Youbike-web/eb8646e4b75c632180c0d07b88effda557b012c5/src/assets/images/marker-noparking.svg" : "https://raw.githubusercontent.com/shenhsiu45/My-web/main/img/green_mark.png"
                 },
                 addToFavYoubikes: function(t) {
                     var e = JSON.parse(localStorage.getItem("favYoubikesId")) || [];
