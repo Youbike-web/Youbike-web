@@ -312,16 +312,16 @@
                 attrs: {
                     url: t.url
                 }
-            
-            }), s("l-control-zoom", {
-                attrs: {
-                    position: "bottomright"
-                }
             }), s("l-control-attribution", {
                 attrs: {
                     position: "bottomright",
                     prefix: "<a href='https://leafletjs.com' target='_blank' title='AJSlibraryforinteractivemaps'>Leaflet</a> | 作者：<a href='https://github.com/shenhsiu45' target='_blank'>shenhsiu45</a> <a href='https://github.com/Dniellu' target='_blank'>Dniellu</a>"
                 }
+            }), s("l-control-zoom", {
+                attrs: {
+                    position: "bottomright"
+                }
+
             }), s("v-marker-cluster", t._l(t.youbikes, (function(e) {
                 return s("l-marker", {
                     key: e.sno,
